@@ -12,8 +12,8 @@ namespace spec
 		TEST_METHOD(OneLetter)
 		{
 			char str[] = "a";
-			int consonants ;
-			int vowels ;
+			int consonants;
+			int vowels;
 			count_vowels_and_consonants(str, &consonants, &vowels);
 
 			Assert::AreEqual(consonants, 0, L"Consonants should be 0", LINE_INFO());
@@ -24,8 +24,8 @@ namespace spec
 		TEST_METHOD(EmptyString)
 		{
 			char str[] = "";
-			int consonants ;
-			int vowels ;
+			int consonants;
+			int vowels;
 			count_vowels_and_consonants(str, &consonants, &vowels);
 
 			Assert::AreEqual(consonants, 0, L"Consonants should be 0", LINE_INFO());
@@ -35,8 +35,8 @@ namespace spec
 		TEST_METHOD(ComplexString)
 		{
 			char str[] = "a .?2343 BCDE mu";
-			int consonants ;
-			int vowels ;
+			int consonants;
+			int vowels;
 			count_vowels_and_consonants(str, &consonants, &vowels);
 
 			Assert::AreEqual(consonants, 4, L"Consonants should be 4", LINE_INFO());
@@ -46,8 +46,8 @@ namespace spec
 		TEST_METHOD(ComplexCapitalLong)
 		{
 			char str[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-			int consonants ;
-			int vowels ;
+			int consonants;
+			int vowels;
 			count_vowels_and_consonants(str, &consonants, &vowels);
 
 			Assert::AreEqual(consonants, 21, L"Consonants should be 21 for A-Z", LINE_INFO());
@@ -56,9 +56,9 @@ namespace spec
 		}
 		TEST_METHOD(NULLstring)
 		{
-			char *str=NULL;
-			int consonants ;
-			int vowels ;
+			char *str = NULL;
+			int consonants;
+			int vowels;
 			count_vowels_and_consonants(str, &consonants, &vowels);
 
 			Assert::AreEqual(consonants, 0, L"Consonants should be 0 for NULL", LINE_INFO());
